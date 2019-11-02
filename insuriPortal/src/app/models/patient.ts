@@ -10,6 +10,7 @@ import { Period } from './period';
 export interface Patient {
     // from Resource: id, meta, implicitRules, and language
     // from DomainResource: text, contained, extension, and modifierExtension
+    id: string;
     identifier: Identifier[]; // An identifier for this patient
     active: boolean; // Whether this patient's record is in active use
     name: HumanName[]; // A name associated with the patient
