@@ -13,10 +13,10 @@ export class PoliceInfoComponent implements OnInit {
   myCoverageData: Coverage[] = [];
   myCoverageData$: Observable<Coverage[]>;
 
-  constructor(private CoverageService: CoverageService) { }
+  constructor(private coverageService: CoverageService) { }
 
   ngOnInit() {
-    this.myCoverageData$ = this.CoverageService.getData();
+    this.myCoverageData$ = this.coverageService.getData();
   }
 
 }

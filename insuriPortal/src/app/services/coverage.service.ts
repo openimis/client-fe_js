@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Coverage } from '../models/coverage';
 import { Observable } from 'rxjs';
 import { fhirUrl } from '../global';
+import { tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class CoverageService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<Coverage[]> {
-    return this.http.get<Coverage[]>(this.configUrl);
+    return this.http.get<any>(this.configUrl).pipe(
+      map(coverage => coverage.entry)
+    );
   }
 }

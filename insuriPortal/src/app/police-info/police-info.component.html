@@ -1,18 +1,20 @@
 
-<p>My policies</p>
+<div class="component-wrapper">
+  <p>My policies</p>
 
+  <table>
+  <tr>
+    <th>Identifier</th>
+    <th>Status</th>
+    <th>Date begin</th>
+    <th>Date Stop</th>
+  </tr>
+  <tr *ngFor="let aSet of (myCoverageData$ | async) ">
+    <td>{{ aSet.resource.identifier[0].value}}</td>
+    <td>{{ aSet.resource.status}}</td>
+    <td>{{ aSet.resource.period.start}}</td>
+    <td>{{ aSet.resource.period.end}}</td>
+  </tr>
+  </table>
 
-<table>
-<tr>
-  <th>Identifier</th>
-  <th>Status</th>
-  <th>Date begin</th>
-  <th>Date Stop</th>
-</tr>
-<tr *ngFor="let aSet of (myCoverageData$ | async).entry ">
-  <td>{{ aSet.resource.identifier[0].value}}</td>
-  <td>{{ aSet.resource.status}}</td>
-  <td>{{ aSet.resource.period.start}}</td>
-  <td>{{ aSet.resource.period.end}}</td>
-</tr>
-</table>
+</div>
