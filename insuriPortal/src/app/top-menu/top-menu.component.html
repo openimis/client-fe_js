@@ -7,13 +7,13 @@
     <span >dashboard</span>
   </button>
   <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/in/dashboard/']" routerLinkActive="router-link-active">
+      <mat-icon>home</mat-icon>
+      <span >dashboard</span>
+    </button>
     <button mat-menu-item [routerLink]="['/in/police-info/']" routerLinkActive="router-link-active">
       <mat-icon>perm_identity</mat-icon>
       <span >Policy</span>
-    </button>
-    <button mat-menu-item [routerLink]="['/in/welcome/']" routerLinkActive="router-link-active">
-      <mat-icon>home</mat-icon>
-      <span >dashboard</span>
     </button>
     <button mat-menu-item [routerLink]="['/in/claims-history/']" routerLinkActive="router-link-active">
       <mat-icon>list</mat-icon>
