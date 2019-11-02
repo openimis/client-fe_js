@@ -1,6 +1,6 @@
 
 <div class="component-wrapper">
-  <div *ngFor="let aSet of (myClaimData$ | async).entry ">
+  <div *ngFor="let aSet of (myClaimData$ | async) ">
     <div class="claim">
     <h2> General </h2>
     <table>
@@ -20,11 +20,11 @@
     <h2> Item and services</h2>
     <table>
       <tr><th>Date</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
-      <tr  *ngFor="let aItem of aSet.resource.item ">
-          <td> {{aItem.servicedDate | json }}</td>
-          <td> {{aItem.category | json }}</td>
-          <td> {{aItem.quantity | json }}</td>
-          <td> {{aItem.net | json }}</td>
+      <tr  *ngFor="let anItem of aSet.resource.item ">
+          <td> {{anItem.servicedDate | json }}</td>
+          <td> {{anItem.category | json }}</td>
+          <td> {{anItem.quantity | json }}</td>
+          <td> {{anItem.net | json }}</td>
       </tr>
 
     </table>
