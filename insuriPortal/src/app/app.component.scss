@@ -7,3 +7,12 @@
 .inner-wrapper {
   margin: 10px 20px;
 }
+
+.header {
+  border-bottom: 1px solid black;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}

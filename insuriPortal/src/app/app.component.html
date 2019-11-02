@@ -1,8 +1,13 @@
 
-<app-top-menu></app-top-menu>
+<div class="header">
+  <app-top-menu></app-top-menu>
 
-<div style="text-align:center">
-  <h1><a routerLink="/">{{ title }}</a></h1>
+  <div style="text-align:center">
+    <h1><a routerLink="/">{{ title }}</a></h1>
+  </div>
+
+  <div></div>
+
 </div>
 
 <div class="main-wrapper">
@@ -10,4 +15,3 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-
