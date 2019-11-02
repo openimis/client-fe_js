@@ -1,7 +1,7 @@
 import { Identifier } from './identifier';
-import { CodeableConcept } from './codeableconcept';
-import { Reference } from './Reference';
-import { Period } from './Period';
+import { CodeableConcept } from './codeableConcept';
+import { Reference } from './reference';
+import { Period } from './period';
 
 export interface Coverage {
     identifier: Identifier[]; // The primary coverage ID
@@ -28,11 +28,10 @@ export interface Coverage {
         classDisplay: string; // Display text for the class
         subClass: string; // An identifier for the subsection of the class
         subClassDisplay: string; // Display text for the subsection of the subclass
-    },
+    };
     dependent: string; // Dependent number
     sequence: string; // The plan instance or sequence counter
     order: number; // Relative order of the coverage
     network: string; // Insurer network
     contract: Reference[]; //(Contract) }] // Contract details
-
 }

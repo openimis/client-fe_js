@@ -1,6 +1,12 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item [routerLink]="['/in/dashboard/']" routerLinkActive="router-link-active">
+    <mat-icon>home</mat-icon>
+    <span >dashboard</span>
   </button>
+<<<<<<< HEAD
   <mat-menu #menu="matMenu">
     <button mat-menu-item [routerLink]="['/in/police-info/']" routerLinkActive="router-link-active">
       <mat-icon>perm_identity</mat-icon>
@@ -23,3 +29,22 @@
       <span >login/logout</span>
     </button>
   </mat-menu>
+=======
+  <button mat-menu-item [routerLink]="['/in/police-info/']" routerLinkActive="router-link-active">
+    <mat-icon>perm_identity</mat-icon>
+    <span >Policy</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/in/claims-history/']" routerLinkActive="router-link-active">
+    <mat-icon>list</mat-icon>
+    <span >Claims history</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/in/drugs-history/']" routerLinkActive="router-link-active">
+    <mat-icon>local_hospital</mat-icon>
+    <span >Drugs history</span>
+  </button>
+  <button mat-menu-item [routerLink]="['/login/']" routerLinkActive="router-link-active">
+    <mat-icon>double_arrow</mat-icon>
+    <span >login/logout</span>
+  </button>
+</mat-menu>
+>>>>>>> ba38c3a09a3bcd5d688096d141e568b2c7b5a27f

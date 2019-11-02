@@ -1,4 +1,4 @@
-import { Period } from './Period';
+import { Period } from './period';
 
 export interface HumanName {
     // from Element: extension
