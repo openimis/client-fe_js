@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   }
   submit() {
     if (this.form.valid) {
+      console.log(this.form.controls['username'].value);
       this.router.navigate(['/in']);
     }
   }
