@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 `npm install -g @angular`
 `npm install -g @angular/core`
 `npm install -g @angular/material`
+`npm install -g @material/menu`
 
 
 

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './app.angular.material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -14,27 +15,31 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PoliceInfoComponent } from './police-info/police-info.component';
 import { ClaimsHistoryComponent } from './claims-history/claims-history.component';
 import { DrugsHistoryComponent } from './drugs-history/drugs-history.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-    LoginComponent,
-    DashboardComponent,
-    PoliceInfoComponent,
-    ClaimsHistoryComponent,
-    DrugsHistoryComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MaterialModule,
-    FormsModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      WelcomeComponent,
+      LoginComponent,
+      DashboardComponent,
+      PoliceInfoComponent,
+      ClaimsHistoryComponent,
+      DrugsHistoryComponent,
+      TopMenuComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      HttpClientModule,
+      MaterialModule,
+      FormsModule,
+      BrowserAnimationsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
