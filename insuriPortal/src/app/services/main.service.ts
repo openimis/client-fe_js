@@ -2,9 +2,9 @@ import { Patient } from './../models/patient';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Test } from '../models/test';
-import { Observable, of } from 'rxjs';
-import { map, tap, shareReplay, catchError } from 'rxjs/operators';
-import { patientUrl } from '../global';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { fhirUrl } from '../global';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class MainService {
     if (typeof this.patient !== 'undefined') {
       return this.patient$;
     } else {
-      this.patient$ = this.http.get<Patient>(patientUrl + patientId).pipe(
+      this.patient$ = this.http.get<Patient>(fhirUrl + 'Patient/' + patientId).pipe(
         map((patient: Patient) => {
           this.patient = patient; 
           return this.patient;
