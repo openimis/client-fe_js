@@ -1,3 +1,3 @@
 
-export const patientUrl='http://hapi.fhir.org/baseDstu3/Patient/';
+export const fhirUrl = 'http://hapi.fhir.org/baseDstu3/';
 
