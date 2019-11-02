@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
 
     this.patient$ = this.mainService.getUser();
-    console.log( this.patient$)
+    
     if (typeof this.patient$ === 'undefined') this.router.navigate(['/login']);
 
   }

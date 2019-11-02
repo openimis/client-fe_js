@@ -2,7 +2,7 @@ import { Patient } from './../models/patient';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Test } from '../models/test';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { fhirUrl } from '../global';
 
@@ -12,7 +12,6 @@ import { fhirUrl } from '../global';
 export class MainService {
 
   configUrl = 'assets/service-test.json';
-  patient$: Observable<Patient>;
   patient: Patient;
 
   constructor(private http: HttpClient) { }
@@ -22,20 +21,18 @@ export class MainService {
   }
 
   getUser(patientId?: string): Observable<Patient> {
-
     if (typeof this.patient === 'undefined' &&
         typeof patientId === 'undefined') return;
 
     if (typeof this.patient !== 'undefined') {
-      return this.patient$;
+      return of(this.patient);
     } else {
-      this.patient$ = this.http.get<Patient>(fhirUrl + 'Patient/' + patientId).pipe(
+      return this.http.get<Patient>(fhirUrl + 'Patient/' + patientId).pipe(
         map((patient: Patient) => {
           this.patient = patient; 
           return this.patient;
         })
       );
-      return this.patient$;
     }
   }
 

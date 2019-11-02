@@ -1,8 +1,11 @@
 
 <div class="component-wrapper">
+
+  <h2>Claims History</h2>
+
   <div *ngFor="let aSet of (myClaimData$ | async) ">
     <div class="claim">
-    <h2> General </h2>
+    <h3> General </h3>
     <table>
       <tr>
         <th>Identifier</th>
@@ -17,7 +20,7 @@
         <td>{{ aSet.resource.billablePeriod.end}}</td>
       </tr>
     </table>
-    <h2> Item and services</h2>
+    <h3> Item and services</h3>
     <table>
       <tr><th>Date</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
       <tr  *ngFor="let anItem of aSet.resource.item ">
