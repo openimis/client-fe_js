@@ -28,11 +28,10 @@ export interface Coverage {
         classDisplay: string; // Display text for the class
         subClass: string; // An identifier for the subsection of the class
         subClassDisplay: string; // Display text for the subsection of the subclass
-    },
+    };
     dependent: string; // Dependent number
     sequence: string; // The plan instance or sequence counter
     order: number; // Relative order of the coverage
     network: string; // Insurer network
     contract: Reference[]; //(Contract) }] // Contract details
-
 }
