@@ -4,8 +4,8 @@ import { ContactPoint } from './contactPoint';
 import { Address } from './address';
 import { CodeableConcept } from './codeableConcept';
 import { Attachment } from './attachment';
-import { Reference } from './Reference';
-import { Period } from './Period';
+import { Reference } from './reference';
+import { Period } from './period';
 
 export interface Patient {
     // from Resource: id, meta, implicitRules, and language

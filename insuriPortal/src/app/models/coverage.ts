@@ -1,7 +1,7 @@
 import { Identifier } from './identifier';
-import { CodeableConcept } from './codeableconcept';
-import { Reference } from './Reference';
-import { Period } from './Period';
+import { CodeableConcept } from './codeableConcept';
+import { Reference } from './reference';
+import { Period } from './period';
 
 export interface Coverage {
     identifier: Identifier[]; // The primary coverage ID

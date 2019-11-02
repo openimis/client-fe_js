@@ -1,6 +1,6 @@
-import { CodeableConcept } from './codeableconcept';
-import { Period } from './Period';
-import { Reference } from './Reference';
+import { CodeableConcept } from './codeableConcept';
+import { Period } from './period';
+import { Reference } from './reference';
 
 export interface Identifier {
     // from Element: extension
