@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// Our general styling
+.component-wrapper {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
