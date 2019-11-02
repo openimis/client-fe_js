@@ -1,6 +1,6 @@
 export interface Attachment {
     // from Element: extension
-    contentType: string; // Mime type of the content, with charset etc. 
+    contentType: string; // Mime type of the content, with charset etc.
     language: string; // Human language of the content (BCP-47)
     data: Blob; // Data inline, base64ed
     url: string; // Uri where the data can be found

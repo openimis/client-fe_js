@@ -4,6 +4,7 @@ import { Reference } from './reference';
 import { Period } from './period';
 
 export interface Coverage {
+    _id: string;
     identifier: Identifier[]; // The primary coverage ID
     // @todo change to enum
     status: string; // active | cancelled | draft | entered-in-error

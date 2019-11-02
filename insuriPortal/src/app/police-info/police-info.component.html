@@ -1,17 +1,18 @@
 
-<div class="component-wrapper">
+<p>My policies</p>
 
-  <p>police-info works!</p>
 
-  1-
-  <pre>{{ myTestData | json}}</pre>
-  <br>
-  2-
-  <div *ngFor="let aSet of myTestData ">
-    <p>{{ aSet.name}}</p>
-  </div>
-  <br>
-  3-
-  <pre>{{ myTestData$ | async | json}}</pre>
-
-</div>
+<table>
+<tr>
+  <th>Identifier</th>
+  <th>Status</th>
+  <th>Date begin</th>
+  <th>Date Stop</th>
+</tr>
+<tr *ngFor="let aSet of (myCoverageData$ | async).entry ">
+  <td>{{ aSet.resource.identifier[0].value}}</td>
+  <td>{{ aSet.resource.status}}</td>
+  <td>{{ aSet.resource.period.start}}</td>
+  <td>{{ aSet.resource.period.end}}</td>
+</tr>
+</table>
