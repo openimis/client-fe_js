@@ -1,4 +1,7 @@
+import { ClaimService } from './../services/claim.service';
 import { Component, OnInit } from '@angular/core';
+import { Claim } from '../models/Claim';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-claims-history',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./claims-history.component.scss']
 })
 export class ClaimsHistoryComponent implements OnInit {
+  myClaimData: Claim[] = [];
+  myClaimData$: Observable<Claim[]>;
 
-  constructor() { }
+  constructor(private ClaimService: ClaimService) { }
 
   ngOnInit() {
+    this.myClaimData$ = this.ClaimService.getData();
   }
+
 
 }

@@ -1,4 +1,34 @@
 
 <div class="component-wrapper">
-  <p>claims-history works!</p>
+  <p>claims-history</p>
+</div>
+<div *ngFor="let aSet of (myClaimData$ | async).entry ">
+  <div class="claim">
+  <h2> General </h2>
+  <table>
+    <tr>
+      <th>Identifier</th>
+      <th>Status</th>
+      <th>Visit start</th>
+      <th>Visit stops</th>
+    </tr>
+    <tr>
+      <td>{{ aSet.resource.id}}</td>
+      <td>{{ aSet.resource.status}}</td>
+      <td>{{ aSet.resource.billablePeriod.start}}</td>
+      <td>{{ aSet.resource.billablePeriod.end}}</td>
+    </tr>
+  </table>
+  <h2> Item and services</h2>
+  <table>
+    <tr><th>Date</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
+    <tr  *ngFor="let aItem of aSet.resource.item ">
+        <td> {{aItem.servicedDate}}</td>
+        <td> {{aItem.category}}</td>
+        <td> {{aItem.quantity}}</td>
+        <td> {{aItem.net}}</td>
+    </tr>
+
+  </table>
+  </div>
 </div>
