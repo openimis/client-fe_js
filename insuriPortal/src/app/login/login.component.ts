@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MainService } from '../services/main.service';
+import { Observable } from 'rxjs';
+import { Patient } from '../models/patient';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +17,19 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  constructor(private router: Router) { }
+  patient$: Observable<Patient>;
+
+  constructor(private router: Router,
+              private mainService: MainService) { }
 
   ngOnInit() {
   }
   submit() {
     if (this.form.valid) {
       console.log(this.form.controls['username'].value);
+
+      //this.patient$ = 
+      this.mainService.getUser(this.form.controls['username'].value).subscribe(x => x);
       this.router.navigate(['/in']);
     }
   }
