@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Test } from '../models/test';
 import { Observable, of } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, shareReplay, catchError } from 'rxjs/operators';
 import { patientUrl } from '../global';
 
 @Injectable({
@@ -12,7 +12,8 @@ import { patientUrl } from '../global';
 export class MainService {
 
   configUrl = 'assets/service-test.json';
-  patient: Patient = null;
+  patient$: Observable<Patient>;
+  patient: Patient;
 
   constructor(private http: HttpClient) { }
 
@@ -21,19 +22,16 @@ export class MainService {
   }
 
   getUser(patientId?: string): Observable<Patient> {
-    console.log('getUser patientId ' + patientId);
-    console.log('this.patient ' + this.patient);
-    if (this.patient !== null) {
-      console.log('cahche used:  ' + this.patient);
-      return of(this.patient);
+    if (typeof this.patient !== 'undefined') {
+      return this.patient$;
     } else {
-      return this.http.get<Patient>(patientUrl + patientId).pipe(
-        tap((patient: Patient) => {
-          console.log('patientId ' + patientId);
-          this.patient = patient; // TODO inside, we have to search the resource, something like .entry .resource ...
+      this.patient$ = this.http.get<Patient>(patientUrl + patientId).pipe(
+        map((patient: Patient) => {
+          this.patient = patient; 
           return this.patient;
         })
       );
+      return this.patient$;
     }
   }
 

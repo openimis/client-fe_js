@@ -17,20 +17,17 @@ export class LoginComponent implements OnInit {
     password: new FormControl(''),
   });
 
-  patient$: Observable<Patient>;
-
   constructor(private router: Router,
               private mainService: MainService) { }
 
   ngOnInit() {
   }
+
   submit() {
     if (this.form.valid) {
-      console.log(this.form.controls['username'].value);
-
-      //this.patient$ = 
-      this.mainService.getUser(this.form.controls['username'].value).subscribe(x => x);
-      this.router.navigate(['/in']);
+      this.mainService.getUser(this.form.controls['username'].value).subscribe(x => {
+        this.router.navigate(['/in']);
+      });
     }
   }
 }
