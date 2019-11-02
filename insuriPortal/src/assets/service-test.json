@@ -1,0 +1,12 @@
+[
+  {
+    "id" : "11",
+    "name":"object 1",
+    "description":"we don't know what it is"
+  },
+  {
+    "id" : "22",
+    "name":"table",
+    "description":"just a table"
+  }
+]

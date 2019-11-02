@@ -1,1 +1,12 @@
 <p>police-info works!</p>
+
+1-
+<pre>{{ myTestData | json}}</pre>
+<br>
+2-
+<div *ngFor="let aSet of myTestData ">
+  <p>{{ aSet.name}}</p>
+</div>
+<br>
+3-
+<pre>{{ myTestData$ | async | json}}</pre>
