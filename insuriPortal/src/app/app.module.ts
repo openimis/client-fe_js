@@ -11,6 +11,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PoliceInfoComponent } from './police-info/police-info.component';
+import { ClaimsHistoryComponent } from './claims-history/claims-history.component';
+import { DrugsHistoryComponent } from './drugs-history/drugs-history.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     WelcomeComponent,
     LoginComponent,
     DashboardComponent,
+    PoliceInfoComponent,
+    ClaimsHistoryComponent,
+    DrugsHistoryComponent,
   ],
   imports: [
     BrowserModule,
