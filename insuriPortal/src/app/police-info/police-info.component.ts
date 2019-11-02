@@ -1,6 +1,6 @@
-import { MainService } from './../services/main.service';
+import { CoverageService } from './../services/coverage.service';
 import { Component, OnInit } from '@angular/core';
-import { Test } from '../models/test';
+import { Coverage } from '../models/coverage';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -10,28 +10,13 @@ import { Observable } from 'rxjs';
 })
 export class PoliceInfoComponent implements OnInit {
 
-  myTestData: Test[] = [];
-  myTestData$: Observable<Test[]>;
+  myCoverageData: Coverage[] = [];
+  myCoverageData$: Observable<Coverage[]>;
 
-  constructor(private mainService: MainService) { }
+  constructor(private CoverageService: CoverageService) { }
 
   ngOnInit() {
-    this.mainService.getData().subscribe((data: Test[]) => {
-      console.log(data);
-      var someData: Test;
-      data.map((aSet: Test) => {
-        someData = {
-          id: aSet['id'],
-          name:  aSet['name'],
-          description:  aSet['description']
-        }
-        this.myTestData.push(someData)
-
-      })
-      console.log(this.myTestData);
-    });
-
-    this.myTestData$ = this.mainService.getData();
+    this.myCoverageData$ = this.CoverageService.getData();
   }
 
 }
