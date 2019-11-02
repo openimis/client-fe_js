@@ -16,3 +16,12 @@
   flex-wrap: nowrap;
   align-items: center;
 }
+
+.title {
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
