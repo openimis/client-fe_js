@@ -1,6 +1,27 @@
 
 <div class="component-wrapper">
-  
-  <h2>Drugs History</h2>
+    <h2>Drugs and Item History</h2>
+    <table>
+        <tr>
+          <th>Visit start</th>
+          <th>Visit stops</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Quatity</th>
+          <th>Net</th>
+          </tr>
+    <span *ngFor="let aSet of (myClaimData$ | async) ">
+        <tr  *ngFor="let anItem of aSet.resource.item ">
 
-</div>
+              <ng-template #Item [ngIf]="anItem.Item">
+                 <td>{{ aSet.resource.billablePeriod.start | date : dateFormat }} </td>
+                 <td>{{ aSet.resource.billablePeriod.end | date : dateFormat }}</td>
+                 <td> Item </td>
+                 <td> {{anItem.category | json }}</td>
+                 <td> {{anItem.quantity | json }}</td>
+                 <td> {{anItem.net.value }} {{anItem.net.code }}</td>
+              </ng-template>
+      </tr>
+    </span>
+    </table>
+  </div>

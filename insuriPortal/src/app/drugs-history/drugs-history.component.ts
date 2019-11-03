@@ -1,5 +1,8 @@
+import { ClaimService } from './../services/claim.service';
 import { Component, OnInit } from '@angular/core';
-
+import { Claim } from '../models/Claim';
+import { Observable } from 'rxjs';
+import {dateFormat} from '../global';
 @Component({
   selector: 'app-drugs-history',
   templateUrl: './drugs-history.component.html',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrugsHistoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ClaimService: ClaimService) { }
 
   ngOnInit() {
+    this.myClaimData$ = this.ClaimService.getData();
   }
 
 }
