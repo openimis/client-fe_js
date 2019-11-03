@@ -1,0 +1,40 @@
+{
+    "resourceType": "Coverage",
+    "id": "1981809",
+    "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-07-12T09:53:59.520+00:00"
+    },
+    "status": "active",
+    "type": {
+      "coding": [
+        {
+          "code": "7"
+        }
+      ]
+    },
+    "policyHolder": {
+      "reference": "Patient/2615008"
+    },
+    "subscriber": {
+      "reference": "Patient/2615008"
+    },
+    "subscriberId": "http://hapi.fhir.org/baseDstu3/Patient/2615008",
+    "beneficiary": {
+      "reference": "Patient/2615008"
+    },
+    "relationship": {
+      "coding": [
+        {
+          "code": "1"
+        }
+      ]
+    },
+    "grouping": {
+      "group": "PUBSUMB",
+      "groupDisplay": "XON",
+      "plan": "056269770"
+    },
+    "order": 2,
+    "network": "MEDICAL MUTUAL CALIF."
+  }
