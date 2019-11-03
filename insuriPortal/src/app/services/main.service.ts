@@ -17,14 +17,6 @@ export class MainService {
 
   constructor(private http: HttpClient) { }
 
-
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
-      'Authorization': 'Basic ' + btoa(fhirAuth.username + ':' + fhirAuth.password)
-    })
-  };
-
   getData(): Observable<Test[]> {
     return this.http.get<Test[]>(this.configUrl);
   }
@@ -36,7 +28,7 @@ export class MainService {
     if (typeof this.patient !== 'undefined') {
       return of(this.patient);
     } else {
-      return this.http.get<Patient>(fhirUrl + 'Patient/' + patientId, this.httpOptions).pipe(
+      return this.http.get<Patient>(fhirUrl + 'Patient?identifier=' + patientId).pipe(
         map((patient: Patient) => {
           this.patient = patient;
           return this.patient;
