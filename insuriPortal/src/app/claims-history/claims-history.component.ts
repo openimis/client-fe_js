@@ -1,8 +1,7 @@
 import { ClaimService } from './../services/claim.service';
 import { Component, OnInit } from '@angular/core';
-import { Claim } from '../models/Claim';
+import { Claim } from '../models/claim';
 import { Observable } from 'rxjs';
-import {dateFormat} from '../global';
 
 @Component({
   selector: 'app-claims-history',

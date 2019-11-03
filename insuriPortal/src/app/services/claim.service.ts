@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Claim } from '../models/Claim';
+import { Claim } from '../models/claim';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { fhirUrl } from '../global';

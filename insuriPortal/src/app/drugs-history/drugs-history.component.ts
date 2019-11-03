@@ -1,7 +1,7 @@
 import { ClaimService } from './../services/claim.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Claim } from '../models/Claim';
+import { Claim } from '../models/claim';
 
 
 @Component({
