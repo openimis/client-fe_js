@@ -1,36 +1,48 @@
 
 <div class="component-wrapper">
-
   <h2>Claims History</h2>
-
   <div *ngFor="let aSet of (myClaimData$ | async) ">
-    <div class="claim">
+    <div class="card">
     <h3> General </h3>
     <table>
-      <tr>
-        <th>Identifier</th>
-        <th>Status</th>
-        <th>Visit start</th>
-        <th>Visit stops</th>
-      </tr>
-      <tr>
-        <td>{{ aSet.resource.id}}</td>
-        <td>{{ aSet.resource.status}}</td>
-        <td>{{ aSet.resource.billablePeriod.start}}</td>
-        <td>{{ aSet.resource.billablePeriod.end}}</td>
-      </tr>
-    </table>
+    <tr> <th  >Identifier: </th><td>{{ aSet.resource.id}}</td></tr>
+    <tr><th  >Status: </th><td> {{ aSet.resource.status}}</td></tr>
+    <tr><th >Visit start: </th><td>{{ aSet.resource.billablePeriod.start | date : dateFormat }} </td></tr>
+    <tr><th >Visit stops: </th> <td>{{ aSet.resource.billablePeriod.end | date : dateFormat }}</td></tr>
+  </table>
     <h3> Item and services</h3>
     <table>
-      <tr><th>Date</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
+      <tr><th>Type</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
       <tr  *ngFor="let anItem of aSet.resource.item ">
-          <td> {{anItem.servicedDate | json }}</td>
-          <td> {{anItem.category | json }}</td>
-          <td> {{anItem.quantity | json }}</td>
-          <td> {{anItem.net | json }}</td>
-      </tr>
-
+          <ng-template #service [ngIf]="anItem.service">
+              <td> Service </td>
+              <td> {{ anItem.service.coding[0].system }}{{ anItem.service.coding[0].code }}</td>
+              <td> </td>
+              <td> {{anItem.net.value }} {{anItem.net.code }}</td>
+              <td> {{anItem.net.value }} {{anItem.net.code }}</td>
+            </ng-template>
+            <ng-template #Encounter [ngIf]="anItem.encounter" >
+               <td> Encounter</td>
+               <td> {{ anItem.encounter[0].reference }}</td>
+               <td> </td>
+               <td> </td>
+            </ng-template>
+            <ng-template #Item [ngIf]="anItem.Item">
+               <td> Item </td>
+               <td> {{anItem.category | json }}</td>
+               <td> {{anItem.quantity | json }}</td>
+               <td> {{anItem.net.value }} {{anItem.net.code }}</td>
+            </ng-template>
+        </tr>
+        <tr  *ngFor="let aProc of aSet.resource.procedure ">
+                <td> Procedure </td>
+                <td> {{ aProc.procedureReference.reference }}</td>
+                <td> </td>
+                <td> </td>
+          </tr>
     </table>
+    <h2>Total</h2>
+    <a>{{ aSet.resource.total.value}} {{ aSet.resource.total.code}}</a>
     </div>
   </div>
 </div>
