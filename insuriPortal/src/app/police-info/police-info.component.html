@@ -11,7 +11,7 @@
     <th>Date Stop</th>
   </tr>
   <tr *ngFor="let aSet of (myCoverageData$ | async) ">
-    <td>{{ aSet.resource.identifier[0].value}}</td>
+    <td>{{ aSet.resource.grouping.plan}}</td>
     <td>{{ aSet.resource.status}}</td>
     <td>{{ aSet.resource.period.start}}</td>
     <td>{{ aSet.resource.period.end}}</td>
