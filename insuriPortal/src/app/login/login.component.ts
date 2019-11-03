@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
 
   submit() {
     if (this.form.valid) {
-      console.log(this.form.controls['username'].value);
       this.mainService.getUser(this.form.controls['username'].value).subscribe(x => {
         this.router.navigate(['/in']);
       });
