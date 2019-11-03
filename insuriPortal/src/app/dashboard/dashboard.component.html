@@ -1,8 +1,14 @@
 
 <div class="component-wrapper">
 
- <app-police-info></app-police-info>
- <app-claims-history></app-claims-history>
+  <h1>Welcome {{ (patient$ | async)?.name[0].family }} <span *ngFor="let anItem of (patient$ | async)?.name[0].given">{{anItem}} </span> </h1>
+  <h2>Dashboard</h2>
+
+  <pre>
+    Insuree number: {{ (patient$ | async)?.identifier[1].value }}<br>
+    Birthday: {{ (patient$ | async)?.birthDate }}<br>
+    Gender: {{ (patient$ | async)?.gender }}</pre><br>
+  
 
 
 </div>
