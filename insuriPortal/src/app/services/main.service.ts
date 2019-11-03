@@ -19,10 +19,8 @@ export class MainService {
 
 
   httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
-      'Authorization': 'Basic ' + btoa(fhirAuth.username + ':' + fhirAuth.password)
-    })
+    headers: new HttpHeaders()
+    .set('Authorization',  `Basic ${btoa(fhirAuth.username + ':' + fhirAuth.password)}`)
   };
 
   getData(): Observable<Test[]> {
@@ -36,11 +34,8 @@ export class MainService {
     if (typeof this.patient !== 'undefined') {
       return of(this.patient);
     } else {
-      return this.http.get<Patient>(fhirUrl + 'Patient/' + patientId, this.httpOptions).pipe(
-        map((patient: Patient) => {
-          this.patient = patient;
-          return this.patient;
-        })
+      return this.http.get<Patient>(fhirUrl + 'Patient?identifier=' + patientId).pipe(
+        map((patient: Patient) => patient)
       );
     }
   }

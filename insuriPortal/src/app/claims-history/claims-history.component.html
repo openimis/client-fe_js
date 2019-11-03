@@ -15,11 +15,11 @@
       <tr><th>Type</th><th>Description</th><th>Quatity</th><th>Net</th></tr>
       <tr  *ngFor="let anItem of aSet.resource.item ">
           <ng-template #service [ngIf]="anItem.service">
-              <td> Service </td>
-              <td> {{ anItem.service.coding[0].system }}{{ anItem.service.coding[0].code }}</td>
+              <td> {{ anItem.category.text }} </td>
+              <td> {{ anItem.service.text }}</td>
               <td> </td>
-              <td> {{anItem.net.value }} {{anItem.net.code }}</td>
-              <td> {{anItem.net.value }} {{anItem.net.code }}</td>
+              <td> {{anItem.quantity.value }}</td>
+              <td> {{anItem.unitPrice.value }}</td>
             </ng-template>
             <ng-template #Encounter [ngIf]="anItem.encounter" >
                <td> Encounter</td>

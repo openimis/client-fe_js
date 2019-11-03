@@ -9,7 +9,7 @@ import { fhirUrl } from '../global';
   providedIn: 'root'
 })
 export class ClaimService {
-  PatientID = 1975632;
+  PatientID = 2615008;
   configUrl = fhirUrl + '/Claim?_format=json&_pretty=true&patient=Patient/' + this.PatientID;
 
   constructor(private http: HttpClient) { }
