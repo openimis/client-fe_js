@@ -1,5 +1,5 @@
 <div class="login-wrapper">
-  <mat-card class="login">
+  <mat-card class="login" *ngIf="!mainService.Patient">
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="submit()">

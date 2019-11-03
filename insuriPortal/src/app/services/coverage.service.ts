@@ -9,7 +9,7 @@ import { tap, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CoverageService {
-  PatientID = 2;
+  PatientID = 2615008;
   configUrl = fhirUrl + '/Coverage?_format=json&_pretty=true&beneficiary=Patient/' + this.PatientID;
 
   constructor(private http: HttpClient) { }
