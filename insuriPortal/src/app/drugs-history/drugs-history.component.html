@@ -6,15 +6,17 @@
             <th>Visit start</th>
             <th>Visit stops</th>
             <th>Description</th>
-            <th>Quatity</th>
+            <th>Quantity</th>
+            <th>Type</th>
             <th>Net</th>
             </tr>
           <tbody *ngFor="let aSet of (myClaimData$ | async) " >
                     <tr *ngFor="let anItem of aSet.resource.item ">
                       <td >{{ aSet.resource.billablePeriod.start | date : dateFormat }} </td>
                       <td >{{ aSet.resource.billablePeriod.end | date : dateFormat }}</td>
-                      <td > {{anItem.service.text | json }}</td>
-                      <td > {{anItem.quantity.value | json }}</td>
+                      <td > {{anItem.service.text }}</td>
+                      <td > {{anItem.quantity.value }}</td>
+                      <td > {{anItem.category.text }}</td>
                       <td > {{anItem.unitPrice.value }} </td>
                     </tr>
                   </tbody>
