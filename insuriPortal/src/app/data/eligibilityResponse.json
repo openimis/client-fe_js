@@ -1,0 +1,49 @@
+{
+    "resourceType": "EligibilityResponse",
+    "insurance": [
+        {
+            "benefitBalance": [
+                {
+                    "category": {
+                        "text": "medical"
+                    },
+                    "financial": [
+                        {
+                            "allowedMoney": {
+                                "value": 0
+                            },
+                            "usedMoney": {
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "contract": {
+                "reference": "Contract/BCUL0001/2020-04-20 00:00:00"
+            }
+        },
+        {
+            "benefitBalance": [
+                {
+                    "category": {
+                        "text": "medical"
+                    },
+                    "financial": [
+                        {
+                            "allowedMoney": {
+                                "value": 0
+                            },
+                            "usedMoney": {
+                                "value": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "contract": {
+                "reference": "Contract/BCUL0001/2020-04-15 00:00:00"
+            }
+        }
+    ]
+}

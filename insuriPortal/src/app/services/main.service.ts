@@ -35,7 +35,11 @@ export class MainService {
       return of(this.patient);
     } else {
       return this.http.get<Patient>(fhirUrl + 'Patient?identifier=' + patientId).pipe(
-        map((patient: Patient) => patient)
+
+        map((patient: Patient) => {
+          this.patient = patient;
+          return this.patient;
+        })
       );
     }
   }

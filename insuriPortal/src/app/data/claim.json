@@ -1,0 +1,112 @@
+{
+    "resourceType": "Claim",
+    "billablePeriod": {
+        "end": "2019-01-03",
+        "start": "2019-01-03"
+    },
+    "created": "2019-01-03",
+    "diagnosis": [
+        {
+            "diagnosisCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "A00..9"
+                    }
+                ]
+            },
+            "sequence": 1,
+            "type": [
+                {
+                    "text": "icd_0"
+                }
+            ]
+        }
+    ],
+    
+    "facility": {
+        "reference": "Location/2615007"
+    },
+    "id": "CID00001",
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "code": "ACSN",
+                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                    }
+                ]
+            },
+            "use": "usual",
+            "value": "1"
+        },
+        {
+            "type": {
+                "coding": [
+                    {
+                        "code": "MR",
+                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                    }
+                ]
+            },
+            "use": "usual",
+            "value": "CID00001"
+        }
+    ],
+    "item": [
+        {
+            "category": {
+                "text": "item"
+            },
+            "quantity": {
+                "value": 2.0
+            },
+            "sequence": 1,
+            "service": {
+                "text": "0182 PARACETAMOL TABS 500 MG"
+            },
+            "unitPrice": {
+                "value": 10.0
+            }
+        },
+        {
+            "category": {
+                "text": "service"
+            },
+            "quantity": {
+                "value": 1.0
+            },
+            "sequence": 2,
+            "service": {
+                "text": "A1 General Consultation"
+            },
+            "unitPrice": {
+                "value": 400.0
+            }
+        },
+        {
+            "category": {
+                "text": "service"
+            },
+            "quantity": {
+                "value": 1.0
+            },
+            "sequence": 3,
+            "service": {
+                "text": "I113  BLOOD SUGAR-RANDOM OR FASTING"
+            },
+            "unitPrice": {
+                "value": 1250.0
+            }
+        }
+    ],
+    "patient": {
+        "reference": "Patient/2615008"
+    },
+    "total": {
+        "value": 1670.0
+    },
+    "type": {
+        "text": "O"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "resourceType": "Location",
+    "address": {
+        "text": "Uitly road 1",
+        "type": "physical",
+        "use": "home"
+    },
+    "id": "VIDS001",
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "code": "ACSN",
+                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                    }
+                ]
+            },
+            "use": "usual",
+            "value": "18"
+        },
+        {
+            "type": {
+                "coding": [
+                    {
+                        "code": "FI",
+                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                    }
+                ]
+            },
+            "use": "usual",
+            "value": "VIDS001"
+        }
+    ],
+    "name": "Viru Dispensary",
+    "telecom": [
+        {
+            "system": "phone",
+            "use": "home",
+            "value": ""
+        },
+        {
+            "system": "fax",
+            "use": "home",
+            "value": ""
+        },
+        {
+            "system": "email",
+            "use": "home",
+            "value": ""
+        }
+    ],
+    "type": {
+        "coding": [
+            {
+                "code": "CSC",
+                "system": "https://www.hl7.org/fhir/STU3/v3/ServiceDeliveryLocationRoleType/vs.html"
+            }
+        ]
+    }
+}
