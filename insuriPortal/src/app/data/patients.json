@@ -1,0 +1,833 @@
+{
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/1",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1950-07-12",
+                "gender": "male",
+                "id": 1,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "1"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "070707070"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "M",
+                            "system": "https://www.hl7.org/fhir/STU3/valueset-marital-status.html"
+                        }
+                    ]
+                },
+                "name": [
+                    {
+                        "family": "Macintyre",
+                        "given": [
+                            "Joseph"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": "                                                                                                    "
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/2",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1952-05-07",
+                "gender": "female",
+                "id": 2,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "2"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "070707081"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "maritalStatus": {
+                    "coding": [
+                        {
+                            "code": "M",
+                            "system": "https://www.hl7.org/fhir/STU3/valueset-marital-status.html"
+                        }
+                    ]
+                },
+                "name": [
+                    {
+                        "family": "Macintyre",
+                        "given": [
+                            "Jane"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/3",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1974-06-11",
+                "gender": "female",
+                "id": 3,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "3"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "070707092"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Macintyre",
+                        "given": [
+                            "Adele"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/4",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1973-11-21",
+                "gender": "male",
+                "id": 4,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "4"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "070707066"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Macintyre",
+                        "given": [
+                            "Abu"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/5",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "2005-10-16",
+                "gender": "female",
+                "id": 5,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "5"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "070707055"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Macintyre",
+                        "given": [
+                            "Jet"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/6",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1970-01-04",
+                "gender": "male",
+                "id": 6,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "6"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "111111119"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Manth",
+                        "given": [
+                            "Roger"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": "                                                                                                    "
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/7",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1976-04-23",
+                "gender": "female",
+                "id": 7,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "7"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "111111118"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Manth",
+                        "given": [
+                            "Rennie"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/8",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "2001-05-17",
+                "gender": "female",
+                "id": 8,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "8"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "111111117"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Manth",
+                        "given": [
+                            "Aby"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/9",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1953-05-12",
+                "gender": "male",
+                "id": 9,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "9"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "111111116"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Manth",
+                        "given": [
+                            "Gayle"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "http://openimis.nepalehr.org/api/api_fhir/Patient/10",
+            "resource": {
+                "resourceType": "Patient",
+                "address": [
+                    {
+                        "text": "",
+                        "type": "physical",
+                        "use": "home"
+                    },
+                    {
+                        "text": "0.0 0.0.png",
+                        "type": "both",
+                        "use": "home"
+                    }
+                ],
+                "birthDate": "1980-08-17",
+                "gender": "female",
+                "id": 10,
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "ACSN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "10"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "SB",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": "111111115"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "code": "PPN",
+                                    "system": "https://hl7.org/fhir/valueset-identifier-type.html"
+                                }
+                            ]
+                        },
+                        "use": "usual",
+                        "value": ""
+                    }
+                ],
+                "name": [
+                    {
+                        "family": "Manth",
+                        "given": [
+                            "Gabbie"
+                        ],
+                        "use": "usual"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "phone",
+                        "use": "home",
+                        "value": ""
+                    },
+                    {
+                        "system": "email",
+                        "use": "home",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ],
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://openimis.nepalehr.org/api/api_fhir/Patient/"
+        },
+        {
+            "relation": "next",
+            "url": "http://openimis.nepalehr.org/api/api_fhir/Patient/?page-offset=2"
+        }
+    ],
+    "total": 138,
+    "type": "searchset"
+}
