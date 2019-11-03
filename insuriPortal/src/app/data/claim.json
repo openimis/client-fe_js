@@ -1,112 +1,115 @@
 {
     "resourceType": "Claim",
-    "billablePeriod": {
-        "end": "2019-01-03",
-        "start": "2019-01-03"
+    "id": "2615010",
+    "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-11-03T13:31:11.449+00:00"
     },
-    "created": "2019-01-03",
-    "diagnosis": [
-        {
-            "diagnosisCodeableConcept": {
-                "coding": [
-                    {
-                        "code": "A00..9"
-                    }
-                ]
-            },
-            "sequence": 1,
-            "type": [
-                {
-                    "text": "icd_0"
-                }
-            ]
-        }
-    ],
-    
-    "facility": {
-        "reference": "Location/2615007"
-    },
-    "id": "CID00001",
     "identifier": [
-        {
-            "type": {
-                "coding": [
-                    {
-                        "code": "ACSN",
-                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
-                    }
-                ]
-            },
-            "use": "usual",
-            "value": "1"
+      {
+        "use": "usual",
+        "type": {
+          "coding": [
+            {
+              "system": "https://hl7.org/fhir/valueset-identifier-type.html",
+              "code": "ACSN"
+            }
+          ]
         },
-        {
-            "type": {
-                "coding": [
-                    {
-                        "code": "MR",
-                        "system": "https://hl7.org/fhir/valueset-identifier-type.html"
-                    }
-                ]
-            },
-            "use": "usual",
-            "value": "CID00001"
-        }
+        "value": "2"
+      },
+      {
+        "use": "usual",
+        "type": {
+          "coding": [
+            {
+              "system": "https://hl7.org/fhir/valueset-identifier-type.html",
+              "code": "MR"
+            }
+          ]
+        },
+        "value": "CIB00001"
+      }
+    ],
+    "type": {
+      "text": "O"
+    },
+    "patient": {
+      "reference": "Patient/2615008"
+    },
+    "billablePeriod": {
+      "start": "2018-12-22",
+      "end": "2018-12-22"
+    },
+    "created": "2018-12-22",
+    "facility": {
+      "reference": "Location/2615007"
+    },
+    "diagnosis": [
+      {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [
+            {
+              "code": "A00.0"
+            }
+          ]
+        },
+        "type": [
+          {
+            "text": "icd_0"
+          }
+        ]
+      },
+      {
+        "sequence": 2,
+        "diagnosisCodeableConcept": {
+          "coding": [
+            {
+              "code": "Diagnosis object (3)"
+            }
+          ]
+        },
+        "type": [
+          {
+            "text": "icd_1"
+          }
+        ]
+      }
     ],
     "item": [
-        {
-            "category": {
-                "text": "item"
-            },
-            "quantity": {
-                "value": 2.0
-            },
-            "sequence": 1,
-            "service": {
-                "text": "0182 PARACETAMOL TABS 500 MG"
-            },
-            "unitPrice": {
-                "value": 10.0
-            }
+      {
+        "sequence": 1,
+        "category": {
+          "text": "item"
         },
-        {
-            "category": {
-                "text": "service"
-            },
-            "quantity": {
-                "value": 1.0
-            },
-            "sequence": 2,
-            "service": {
-                "text": "A1 General Consultation"
-            },
-            "unitPrice": {
-                "value": 400.0
-            }
+        "service": {
+          "text": "0182 PARACETAMOL TABS 500 MG"
         },
-        {
-            "category": {
-                "text": "service"
-            },
-            "quantity": {
-                "value": 1.0
-            },
-            "sequence": 3,
-            "service": {
-                "text": "I113  BLOOD SUGAR-RANDOM OR FASTING"
-            },
-            "unitPrice": {
-                "value": 1250.0
-            }
+        "quantity": {
+          "value": 20.0
+        },
+        "unitPrice": {
+          "value": 10.0
         }
+      },
+      {
+        "sequence": 2,
+        "category": {
+          "text": "service"
+        },
+        "service": {
+          "text": "I26 BLOOD SLIDE FOR MALARIAL PARASITES (BS FOR MPS)"
+        },
+        "quantity": {
+          "value": 1.0
+        },
+        "unitPrice": {
+          "value": 800.0
+        }
+      }
     ],
-    "patient": {
-        "reference": "Patient/2615008"
-    },
     "total": {
-        "value": 1670.0
-    },
-    "type": {
-        "text": "O"
+      "value": 1000.0
     }
-}
+  }
