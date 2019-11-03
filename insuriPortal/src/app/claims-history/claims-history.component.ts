@@ -16,15 +16,18 @@ export class ClaimsHistoryComponent implements OnInit {
   myClaimData$: Observable<Claim[]>;
 
   patient$: Observable<Patient>;
+  patientId: string;
 
   constructor(private claimService: ClaimService,
               private mainService: MainService,
               private router: Router) { }
 
   ngOnInit() {
-    this.myClaimData$ = this.claimService.getData();
-
     this.patient$ = this.mainService.getUser();
+    this.patientId = this.mainService.getUserId();
+
+    this.myClaimData$ = this.claimService.getData(this.patientId);
+
     if (typeof this.patient$ === 'undefined') this.router.navigate(['/login']);
 
   }
