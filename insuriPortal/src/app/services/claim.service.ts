@@ -9,13 +9,13 @@ import { fhirUrl } from '../global';
   providedIn: 'root'
 })
 export class ClaimService {
-  PatientID = 2615008;
-  configUrl = fhirUrl + '/Claim?_format=json&_pretty=true&patient=Patient/' + this.PatientID;
+  // PatientID = 2615008;
+  // configUrl = fhirUrl + '/Claim?_format=json&_pretty=true&patient=Patient/' + this.PatientID;
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<Claim[]> {
-    return this.http.get<any>(this.configUrl).pipe(
+  getData(patientId): Observable<Claim[]> {
+    return this.http.get<any>(fhirUrl + '/Claim?_format=json&_pretty=true&patient=Patient/' + patientId).pipe(
       map(coverage => coverage.entry)
     );
   }

@@ -44,4 +44,9 @@ export class MainService {
     }
   }
 
+  getUserId(): string {
+    if (typeof this.patient === 'undefined') return;
+    else return this.patient.id;
+  }
+
 }
