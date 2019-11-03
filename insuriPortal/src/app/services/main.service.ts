@@ -28,6 +28,8 @@ export class MainService {
   }
 
   getUser(patientId?: string): Observable<Patient> {
+
+    console.log(patientId);
     if (typeof this.patient === 'undefined' &&
         typeof patientId === 'undefined') return;
 

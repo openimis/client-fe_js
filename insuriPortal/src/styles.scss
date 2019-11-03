@@ -20,7 +20,11 @@ html *
    color:rgb(114, 116, 117);
 
    button span {
-     color: white !important;
+     color: white;
+   }
+
+   .mat-menu-content button span {
+     color: rgb(114, 116, 117);
    }
 }
 
