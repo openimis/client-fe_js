@@ -10,12 +10,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PoliceInfoComponent } from './police-info/police-info.component';
 import { ClaimsHistoryComponent } from './claims-history/claims-history.component';
 import { DrugsHistoryComponent } from './drugs-history/drugs-history.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
+import { FhirInterceptor } from './auth/http.interceptor';
 
 @NgModule({
    declarations: [
@@ -37,7 +38,13 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
       FormsModule,
       BrowserAnimationsModule
    ],
-   providers: [],
+   providers: [
+      // {
+      //    provide: HTTP_INTERCEPTORS,
+      //    useClass: FhirInterceptor,
+      //    multi: true
+      //  }
+   ],
    bootstrap: [
       AppComponent
    ]
